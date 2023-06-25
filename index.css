@@ -1,0 +1,36 @@
+.navbar {
+  height: 4rem;
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 1rem;
+  transition: height 0.8s cubic-bezier(0, 0, 0.02, 1);
+  overflow: hidden; /* Hide the extra links initially */
+}
+
+.menu {
+  font-size: 2rem;
+  color: rgba(167, 162, 155, 0.5);
+}
+
+.extra-links {
+  display: none; /* Hide the extra links initially */
+  width: 100%; /* Make the extra links take up the full width of the navbar */
+}
+
+.extra-links a {
+  display: block; /* Make the extra links stack vertically */
+}
+
+.navbar.expanded {
+  height: auto; /* Allow the navbar to grow to fit the extra links */
+}
+
+.navbar.expanded .extra-links {
+  display: block; /* Show the extra links when the navbar is expanded */
+}
+
+.hero {
+  padding: 0 1rem;
+}
