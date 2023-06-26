@@ -1,13 +1,12 @@
 const hamburgerMenu = document.querySelector(".menu");
-const oldNavbarHeight = document.querySelector(".navbar").clientHeight;
 const navbar = document.querySelector(".navbar");
 
 let expanded = false; // set to false initially
 hamburgerMenu.addEventListener("click", () => {
   if (expanded) {
-    navbar.style.height = `${oldNavbarHeight}px`;
+    navbar.style.maxHeight = "4rem"; // Adjust max-height here
   } else {
-    navbar.style.height = "16rem";
+    navbar.style.maxHeight = "16rem"; // And here
   }
   navbar.classList.toggle("expanded");
   expanded = !expanded;
